@@ -48,6 +48,11 @@ let postTaxPrices = prices.map((element, index, array) => {
   return element*1.07
 })
 
+console.log(postTaxPrices)
+
+
+
+
 
 
 ////////// PROBLEM 3 //////////

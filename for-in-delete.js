@@ -53,7 +53,14 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj) {
+  for(var prop in obj){
+    if(obj[prop] > 10){
+      obj[prop] = 0
+    }
+  }
+  return obj
+}
 
 
 
@@ -65,7 +72,12 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double(object){
+  for(var key in object){
+    object[key]*2
+  }
+  return object
+}
 
 
 
@@ -79,7 +91,15 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets(obj){
+  var emptyString = '';
+  for(let prop in obj){
+    if(obj[prop] === 'sh'){
+      emptyString = obj
+    }
+  }
+  return emptyString
+}
 
 
 

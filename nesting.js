@@ -50,22 +50,19 @@ var employees = [
     3. Return the updated employee array.
 */
 
-let updatedEmployees = employees.map((element, index, array) => {
-  if(element === 'Theo'){
-    delete element
+function employeeUpdater(){
+  for(let i=0; i < employees.length; i++){
+    if(employees[i].firstName === 'Theo'){
+      delete employees[i]
+    } else if(employees[i].firstName === 'Lorie'){
+      employees[i].department = 'HR'
+    }
   }
-  if(element === 'Lorie'){
-    element[department] = 'HR'
-  }
-  return element
-});
-
-console.log(updatedEmployees)
+  return employees
+}
 
 
  
-
-
 
 
 
@@ -89,7 +86,7 @@ function removeDuplicates(){
   return removeDuplicatesNewArray
 }
 
-removeDuplicates()
+console.log(removeDuplicates())
 
 
 
@@ -164,12 +161,12 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-function recordCleaner = myCar.map((element, index, array) => {
-  let newReport = myCar.accidents[atFaultForAccident] = false;
-  return newReport;
-})
+// function recordCleaner = myCar.map((element, index, array) => {
+//   let newReport = myCar.accidents[atFaultForAccident] = false;
+//   return newReport;
+// })
 
-console.log(recordCleaner)
+// console.log(recordCleaner)
 
 
 
@@ -189,12 +186,12 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-let looper = numsArr.map((elements, index, array) => {
-  if(element % 2 === 0){
-    return element = 'even'
-  } else {
-    return element = 'odd'
-  }
-})
+// let looper = numsArr.map((elements, index, array) => {
+//   if(element % 2 === 0){
+//     return element = 'even'
+//   } else {
+//     return element = 'odd'
+//   }
+// })
 
-looper(numsArr)
+// looper(numsArr)

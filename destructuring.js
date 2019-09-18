@@ -24,10 +24,6 @@ var carDetails = {
 let {color, make, model, year} = carDetails
 
 
-
-
-
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -56,9 +52,10 @@ greeting({firstName: 'TJ', lastName: 'McCarty', title: 'Mr.'})
   Sum up the values and return the total number.
 */
 
-//Code Here
-
-
+function totalPopulation(obj) {
+  let {utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -70,7 +67,16 @@ greeting({firstName: 'TJ', lastName: 'McCarty', title: 'Mr.'})
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+
+
+function ingredients(obj) {
+  let newArray = [];
+  let {carb, fat, protein} = obj;
+  newArray.push(carb, fat, protein);
+  return newArray
+}
+
+ingredients(obj)
 
 
 
@@ -88,7 +94,17 @@ greeting({firstName: 'TJ', lastName: 'McCarty', title: 'Mr.'})
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers(obj){
+  let smallestNumber = 0;
+  let {first, second, third} = obj;
+  if(first < second && first < third){
+    return smallestNumber = first 
+  } else if(second < first && second && third){
+    return smallestNumber = second
+  } else {
+    return smallestNumber = third
+  }
+}
 
 
 
@@ -100,6 +116,16 @@ greeting({firstName: 'TJ', lastName: 'McCarty', title: 'Mr.'})
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups(obj) {
+  let longestArray = []
+  let {a, b, c} = obj;
+  if(a > b && a > c){
+    return longestArray = a
+  } else if(b > a && b > c){
+    return longestArray = b
+  } else {
+    return longestArray = c
+  }
+}
 
 

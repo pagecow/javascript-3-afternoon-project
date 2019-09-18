@@ -39,8 +39,12 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
-  //Code Here
+function showValues(obj) {
+  let str = ''
+  for(let key in obj){
+    str += obj[key]
+  }
+  return str
 }
 
 
@@ -74,7 +78,9 @@ function greaterThan10(obj) {
 
 function double(object){
   for(var key in object){
-    object[key]*2
+    object[key] = object[key]*2
+    // could write: object[key] *= 2
+    // it means the same thing 'object[key]*2' is assigned to object[key]
   }
   return object
 }
@@ -93,15 +99,14 @@ function double(object){
 
 function secrets(obj){
   var emptyString = '';
+
   for(let prop in obj){
-    if(obj[prop] === 'sh'){
-      emptyString = obj
+    if(prop[0] === 's' && prop[1] === 'h'){
+      emptyString += obj[prop]
     }
   }
   return emptyString
 }
-
-
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -130,7 +135,17 @@ function secrets(obj){
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword(obj) {
+  for(let prop in obj){
+    if(obj[prop] === 'password') {
+      obj = delete obj[prop]
+    }
+  }
+  
+  return obj;
+}
+
+console.log(obj)
 
 
 

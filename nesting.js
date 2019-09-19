@@ -61,10 +61,7 @@ function employeeUpdater(){
   return employees
 }
 
-
- 
-
-
+// console.log(employeeUpdater())
 
 ////////// PROBLEM 2 //////////
 
@@ -86,12 +83,7 @@ function removeDuplicates(){
   return removeDuplicatesNewArray
 }
 
-console.log(removeDuplicates())
-
-
-
-
-
+// console.log(removeDuplicates())
 
 
 
@@ -120,8 +112,16 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends.reduce(e => {
+  if(e.name === 'Grumpy'){
+    return e.activities[1]
+  } 
+});
+
+var fluffy2ndFriend = cat.catFriends.reduce(e => 'Lazy Bones');
+
+
+// console.log(fluffy2ndFriend)
 
 
 
@@ -161,12 +161,19 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-// function recordCleaner = myCar.map((element, index, array) => {
-//   let newReport = myCar.accidents[atFaultForAccident] = false;
-//   return newReport;
-// })
+let recordCleaner = e => {
+  for(var prop in e){
+    if(prop === true){
+      return e[prop] = false
+    }
+  }
+  return e
+}
 
-// console.log(recordCleaner)
+recordCleaner(myCar)
+
+
+// ----------------------help
 
 
 
@@ -186,12 +193,8 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-// let looper = numsArr.map((elements, index, array) => {
-//   if(element % 2 === 0){
-//     return element = 'even'
-//   } else {
-//     return element = 'odd'
+// function looper(arr){
+//   for(var prop in arr){
+//     if(prop === %2)
 //   }
-// })
-
-// looper(numsArr)
+// }
